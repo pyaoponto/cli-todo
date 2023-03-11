@@ -55,7 +55,7 @@ def show(category: str = None):
     table.add_column("Todo", min_width=20)
     table.add_column("Category", min_width=12, justify="right")
     table.add_column("Created At", min_width=12, justify="right")
-    table.add_column("Done", min_width=12, justify="right")
+    table.add_column("Done", min_width=6, justify="right")
 
     def get_category_color(category):
         COLORS = {'Learn': 'cyan', 'YouTube': 'red', 'Sports': 'cyan', 'Study': 'green'}
@@ -67,7 +67,7 @@ def show(category: str = None):
         c = get_category_color(task.category)
         is_done_str = '✅' if task.status == 2 else '❌'
         dt_obj = datetime.fromisoformat(task.date_added).strftime('%d-%m-%Y')
-        table.add_row(str(idx), task.task, f'[{c}]{task.category}[/{c}]', dt_obj, is_done_str)
+        table.add_row(str(idx), f"[white]{task.task}[/white]", f'[white]{task.category}[/white]', dt_obj, is_done_str)
     console.print(table)
 
 
