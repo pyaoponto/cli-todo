@@ -1,5 +1,7 @@
 # cli-todo
-cli-todo em python
+
+cli-todo em Python utilizando as bibliotecas rich e typer
+
 Projeto adaptado de [Patrick Loeber](https://github.com/patrickloeber?tab=repositories)
 
 #Instalação
